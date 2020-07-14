@@ -26,6 +26,7 @@ body{
   --color-orange: #ff3c00;
   --color-light-black: #222;
   --color-black: #000;
+  --color-slate-gray: #778899;
 
   --shadow:(0,0,0, .4); 
 }
@@ -131,4 +132,16 @@ body{
   }
   .btn--operator {
     color: var(--color-orange);
+  }
+
+  .results-table {
+    height: 80vh;
+    width: 25%;
+    box-shadow: 0 2rem 4rem var(--shadow);
+    background-color: var(--color-slate-gray);
+    float: right;
+    margin: 50px;
+    color: var(--color-white);
+    font-size:24px;
+    font-weight: bolder;
   }
