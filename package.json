@@ -19,12 +19,13 @@
   "description": "A MERN stack Calculator application",
   "main": "server.js",
   "devDependencies": {},
+  "engines": {
+      "node": "12.x"
+    },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tommyboone/sezzle-calculator.git",
-    "engines": {
-      "node": "12.x"
-    }
+    "url": "git+https://github.com/tommyboone/sezzle-calculator.git"
+  
   },
   "author": "Tommy Boone",
   "license": "ISC",
