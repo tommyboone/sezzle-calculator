@@ -1,13 +1,12 @@
 import axios from 'axios';
 
 export default{
-    findAll: function(){
-        return axios.get('/api/calculator/list');
-    },
+ 
     limit: function(){
-        return axios.get('api/calculator/limit');
+        return axios.get('api/calculator/save');
     },
     save: function(data){
+        
         return axios.post('api/calculator/save', data)
     }
 

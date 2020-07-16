@@ -5,10 +5,9 @@ import Button from '../Button';
 
 const LargeButton = (props) => {
 
-  
 
     return(
-        <Button type='large' {...props} />
+        <Button type='large' {...props}  />
     )
     
 }
