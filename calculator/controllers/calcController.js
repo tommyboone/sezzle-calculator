@@ -3,7 +3,7 @@ const db = require('../models');
 module.exports = {
     limit: function(req,res){
         db.Calculator.find()
-        .sort( {created: -1 } )
+        .sort( {_id: -1} )
         .limit(10)
         .then(results => res.json(results))
         .catch(err => res.status(400).json(err));
