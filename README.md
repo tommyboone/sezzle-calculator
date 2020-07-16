@@ -1,5 +1,9 @@
 # sezzle-calculator
 
+# Link to Deployed Application
+
+https://sezzle-calculator-tb.herokuapp.com/
+
 # Stack 
 
 This application was built using the MERN stack. MongoDB, Express, React, and Node.js
