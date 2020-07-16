@@ -5,8 +5,9 @@
     "mongoose": "^5.9.24",
     "path": "^0.12.7",
     "react": "^16.13.1",
-    "server": "^1.0.29",
-    "react-scripts": "3.4.1"
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "server": "^1.0.29"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,7 +22,6 @@
   "devDependencies": {},
   "engines": {
     "node": "12.x"
- 
   },
   "repository": {
     "type": "git",
