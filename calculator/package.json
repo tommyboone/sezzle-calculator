@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.24",
+    "path": "^0.12.7",
+    "react": "^16.13.1",
+    "server": "^1.0.29",
+    "socket.io": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "name": "sezzle-calculator",
+  "version": "1.0.0",
+  "description": "A MERN stack Calculator application",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tommyboone/sezzle-calculator.git"
+  },
+  "author": "Tommy Boone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tommyboone/sezzle-calculator/issues"
+  },
+  "homepage": "https://github.com/tommyboone/sezzle-calculator#readme",
+
+  "proxy": "http://localhost:3000"
+  
+}

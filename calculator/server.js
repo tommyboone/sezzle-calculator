@@ -5,8 +5,14 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 const routes = require("./routes/API-routes");
+
 //connect to mongodb
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/sezzlecalc");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/sezzlecalc", {
+  useNewUrlParser: true,
+});
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname + "/"));
@@ -26,6 +32,16 @@ app.use(express.static("static"));
 
 //API Routes
 app.use("/api/calculator", routes);
+
+app.get("/api/calculator/save", function (req, res) {
+  console.log(req.body);
+  res.json(req.body);
+});
+
+app.post("/api/calculator/save", function (req, res) {
+  console.log(req.body);
+  res.json(req.body);
+});
 
 //CORS Headers
 app.use(function (req, res, next) {
