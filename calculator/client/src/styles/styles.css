@@ -149,8 +149,10 @@ body{
   .table-item{
     background-color: var(--color-light-white);
     color: var(--color-light-black);
-    height: 60px;
+    height: 70px;
     font-size: 24px;
+    padding: 10px;
+   
   }
 
   .table-item:hover{
