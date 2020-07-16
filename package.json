@@ -21,7 +21,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tommyboone/sezzle-calculator.git"
+    "url": "git+https://github.com/tommyboone/sezzle-calculator.git",
+    "engines": {
+      "node": "12.x"
+    }
   },
   "author": "Tommy Boone",
   "license": "ISC",
