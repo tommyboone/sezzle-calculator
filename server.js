@@ -6,6 +6,11 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 const routes = require("./routes/API-routes");
 
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 //connect to mongodb
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/sezzlecalc", {
   useNewUrlParser: true,
@@ -14,9 +19,9 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/sezzlecalc", {
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "build" , "index.html"));
-});
+// app.get("/", function (req, res) {
+//   res.sendFile(path.join(__dirname, "build" ,"index.html"));
+// });
 
 //middleware
 app.use(express.urlencoded({ extended: true }));
@@ -28,7 +33,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-app.use(express.static("static"));
+
+
 
 //API Routes
 app.use("/api/calculator", routes);
