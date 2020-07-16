@@ -6,10 +6,10 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 const routes = require("./routes/API-routes");
 
-app.use(express.static(path.join(__dirname, "../client/build")));
+app.use(express.static(path.join(__dirname, "/client/build")));
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "/client/build", "index.html"));
 });
 
 //connect to mongodb
