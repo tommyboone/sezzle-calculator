@@ -8,16 +8,6 @@ class TableItem extends Component {
       item: [],
     };
   }
-
-  //   componentDidMount() {
-  //     API.limit()
-  //       .then((response) => {
-  //         this.setState({ item: response.data });
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //       });
-  //   }
   render() {
     API.limit()
       .then((response) => {
