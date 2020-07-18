@@ -20,10 +20,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/sezzlecalc", {
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
-// app.get("/", function (req, res) {
-//   res.sendFile(path.join(__dirname, "build" ,"index.html"));
-// });
-
 //middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -39,12 +35,10 @@ if (process.env.NODE_ENV === "production") {
 app.use("/api/calculator", routes);
 
 app.get("/api/calculator/save", function (req, res) {
-  console.log(req.body);
   res.json(req.body);
 });
 
 app.post("/api/calculator/save", function (req, res) {
-  console.log(req.body);
   res.json(req.body);
 });
 
